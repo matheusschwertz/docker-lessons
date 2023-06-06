@@ -1,0 +1,12 @@
+    #criando um volume binding = cria um volume que conversa / container conversando com o host
+
+$ docker run -it -w /app -v /tmp/target:/app alpine sh
+--------------------------
+Ex: Iniciando a CLI da AWS
+--------------------------
+#- baixar a image do container 
+1. $ docker pull amazon/aws-cli
+#- assim vamos subir a pasta para ter acesso as credentials necessárias para acessar os buckets
+2. $ docker run --entrypoint "" -it -v $HOME/ .aws:/root/aws amazon/aws-cli sh 
+
+    #criando um volume local = 
