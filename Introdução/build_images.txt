@@ -1,0 +1,16 @@
+1-DockerFile - instruções soobre o que o docker deve fazer durante o build
+#tudo o que deve conter na imagem para a aplicação funcionar 
+#Dev passa as demandas do que deve haver na construção de sua aplicação 
+
+Começamos sempre com o 
+-----------------------------------------------------------------------------------
+---------------- DockerFile - está automatizado no CI -----------------------------
+-----------------------------------------------------------------------------------
+- FROM - qual a imagem base/ ex: alpine | python:alpine-3.14
+- RUN - o que preciso configurar no SO - comandos para configurar a aplicação 
+- COPY - copiar um arquivo do diretório para o container, mandar o arquivo pra lá 
+- ENV - declarar variáveis de AMBIENTE 
+- CMD - comando/ para roda quando eu executar um docker run | ex:python3 script.py 
+
+$ docker build - cria a image!
+

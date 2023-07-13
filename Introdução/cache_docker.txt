@@ -1,0 +1,18 @@
+Em cada camada tera um diretório chamado diff, que vai mostrar as alterações que ocorreram de uma camada para a outra 
+----------------------------------------------------------------------------------------------------------------------
+- FROM - python     -CAMADA 1
+- WORKDIR - /app    -CAMADA 2  
+- COPY - ..         -CAMADA 3
+- RUN - apk add     -CAMADA 4
+- ENV - envi        -CAMADA 5
+- CMD - python3     -CAMADA 6
+
+
+--------------------
+    -> DIRETÓRIO 
+--------------------
+- app.py
+- .env
+- makefile - arq para organização do projeto 
+- conf.yaml
+- dockerfile 

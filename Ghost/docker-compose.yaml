@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+
+  ghost:
+    image: ghost:4-alpine
+    ports:
+      - 8080:2368
+    environment:
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: V4A3Msq#M3Xdv#Cf
+      database__connection__database: ghost
+    volumes:
+      - "ghost:/var/lib/ghost"
+    networks:
+      - public
+      - private
+    depends_on:
+      - db
+    deploy:
+      replicas: 1
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: V4A3Msq#M3Xdv#Cf
+    volumes:
+      - "db:/var/lib/mysql"
+    networks:
+      - private
+    deploy:
+      replicas: 1
+
+volumes:
+  ghost:
+  db:
+
+networks:
+  public:
+  private:
